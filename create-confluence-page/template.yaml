@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: create-confluence-pages
-  title: Create Confluence Structure
+  title: Create Confluence Structure2
   description: Generate documentation structure in Confluence
 spec:
   owner: your-team
@@ -13,4 +13,4 @@ spec:
       action: run:script
       input:
         script: |
-          node scripts/create-confluence-structure.js
+          node create-confluence-structure.js
