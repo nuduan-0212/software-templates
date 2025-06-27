@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const baseUrl = 'https://confluence.jitsinnovationlabs.com';
 const username = 'anhdn';
-const password = 'admin2025'; 
+const password = 'NaXNekVsR8M1lxdgJ7NnFK4fOxrsGoQ6AV1Yfd'; 
 
 const auth = {
   username,
