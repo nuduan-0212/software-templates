@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: create-confluence-space
-  title: Create Confluence Space4
+  title: Create Confluence Space5
   description: Tạo một Confluence Space từ Backstage
 spec:
   owner: backstage-team
