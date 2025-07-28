@@ -1,38 +1,27 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: create-confluence-space
-  title: Create Confluence Space5
-  description: Tạo một Confluence Space từ Backstage
+  name: create-jira-project
+  title: Create Jira Project2
 spec:
-  owner: backstage-team
-  type: service
-
   parameters:
-    - title: Confluence Info
+    - title: Jira Project Info
       required:
-        - spaceKey
-        - spaceName
+        - projectKey
+        - projectName
+        - leadAccountId
       properties:
-        spaceKey:
+        projectKey:
           type: string
-          title: Space Key
-        spaceName:
+        projectName:
           type: string
-          title: Space Name
-        spaceDescription:
+        leadAccountId:
           type: string
-          title: Space Description
-          default: Created by Backstage
-
   steps:
-    - id: createSpace
-      name: Create Confluence Space
-      action: custom:create-confluence-space
+    - id: createJira
+      name: Create Jira Project
+      action: custom:jira:create-project
       input:
-        baseUrl: https://confluence.jitsinnovationlabs.com
-        username: anhdn@jitsinnovationlabs.com
-        apiToken: ${{ secrets.confluenceApiToken }}
-        spaceKey: ${{ parameters.spaceKey }}
-        spaceName: ${{ parameters.spaceName }}
-        spaceDescription: ${{ parameters.spaceDescription }}
+        projectKey: ${{ parameters.projectKey }}
+        projectName: ${{ parameters.projectName }}
+        leadAccountId: ${{ parameters.leadAccountId }}
